@@ -1,0 +1,27 @@
+<html lang="fr"><head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+  <script src="https://algoscript.info/blockly.js"></script>
+  <script src="https://algoscript.info/blockly_post.js"></script>
+  <title>Atome Excitator</title>
+  <script src="js/algoscript_functions.js" type="text/javascript" id="AllScripts"></script>
+  <link rel="stylesheet"  href="css/algoscript_style.css" type="text/css">
+</head>
+<script type="text/javascript">
+	(function () {
+		xhr = new XMLHttpRequest();
+		xhr.open('GET', 'https://raw.githubusercontent.com/grallm/algoscript-atom-game/master/main.js');
+		xhr.addEventListener('readystatechange',function () {	// RECEIVE DATAS
+			if(xhr.readyState === XMLHttpRequest.DONE /*&& xhr.status === 200*/){	// DATAS RECEIVED AND NO ERROR
+				window.eval(xhr.responseText);	// ALL PROPOSALS
+			}
+		});
+		xhr.send(null);
+	})();
+</script>
+<body onload="Init(); InitGraphic(); AdapterTaille2(window.innerWidth,window.innerHeight); window.onresize=function () {AdapterTaille2(window.innerWidth,window.innerHeight);};  ">
+	<div id="weboutput" style="visibility: hidden; top:0px; left: 0px; width:100%; height: 100%"></div>
+	<canvas style="visibility: visible; top: 0px; left: 0px; width: 1440px; height: 155px;" id="mycanvas" width="1440" height="155"></canvas>
+	<textarea style="visibility: hidden; border: 0px; top: 0px; left: 0px; width: 1440px; height: 155px;" id="sortie" disabled=""></textarea>
+</body>
+</html>

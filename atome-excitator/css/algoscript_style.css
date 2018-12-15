@@ -1,0 +1,473 @@
+
+	  body {
+		font-size: 1em;
+		width: 480px;
+		height: 320px;
+		overflow: hidden;
+	}
+
+	#sortie, #lecode, #mycanvas, #SaisieTexte, #weboutput, #Aide, #divtuto, #credits, #GestionFichiers {
+		-ms-transition: -ms-transform 1s ease;
+		-moz-transition: -moz-transform 1s ease;
+		-webkit-transition: -webkit-transform 1s ease;
+		-o-transition: -o-transform 1s ease;
+		transition: transform 1s ease;
+		transform-origin: bottom right;
+		-ms-transform-origin: bottom right;
+		-moz-transform-origin: bottom right;
+		-webkit-transform-origin: bottom right;
+		-o-transform-origin: bottom right;
+	}
+
+
+	#sortie {
+		position: absolute;
+		top: 30px;
+		left:0px;
+		width: 480px;
+		height: 300px;
+		background-color: black;
+		color: rgb(100,255,100);
+		font-weight: bold;
+		font-family: Monospace, system;
+		overflow: auto;
+	}
+	#lecode {
+		position: absolute;
+		overflow: auto;
+		top: 30px;
+		left:0px;
+		font-family: Monospace, system;
+		width: 480px;
+		height: 600px;
+		background-color: rgb(220,220,220);
+		color: black;
+		font-size: 0.8em;
+	}
+	#mycanvas {
+		position: absolute;
+		border: 1px solid;
+		border-color: black;
+		top: 30px;
+		left: 0px;
+		width: 480px;
+		height: 300px;
+		background-color: white;
+				overflow: hidden;
+
+	}
+
+	#SaisieTexte {
+		position: absolute;
+		top: 30px;
+		left:0px;
+		width: 480px;
+		height: 300px;
+		color: black;
+		background-color: rgb(200,200,255);
+		visibility: hidden;
+		overflow: auto;
+z-index:100;
+	}
+
+
+	#Aide {
+		position: absolute;
+		top: 30px;
+		left:0px;
+		width: 480px;
+		color: black;
+		border:1px solid;
+		border-color: black;
+		background-color: white;
+		visibility: hidden;
+		overflow: auto;
+		font-size: 1em;
+		height: auto;
+
+	}
+	#Aide dt {
+		font-family: Monospace, system;
+		color: red;
+		font-weight: bold;
+	}
+	#Aide dd {
+		font-family: Arial, helvetica, sans serif;
+		color: black;
+		font-style: italic;
+	}
+
+	#bouton_fg {
+		background-color: rgb(10,10,118);
+		color: black;
+	}
+
+
+
+#titre_onglet {
+	color: black;
+	font-size: 1em;
+	font-family: helvetica, arial, sans-serif;
+	border: none;
+	font-style: italic;
+	font-weight: bold;
+	width: 120px;
+}
+
+#boutons table {
+	width: 100%;
+	padding: 0; margin: 0;
+}
+
+#boutons td {
+	padding: 0; margin: 0;
+}
+
+#boutons {
+	width: 480px;
+	height: 31px;
+	z-index: 2000;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: rgb(10,10,118);
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAeCAIAAABi9+OQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3AwQFDYbJJefXwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAN0lEQVQI103MyQ3AMAACQe+4/4aS5vLwoSAeaEGM530piaYamEjlqNo7kpmblze4P6sdh/228gEumQLy/g1NKAAAAABJRU5ErkJggg==);
+	margin: 0; padding: 0;
+}
+
+#boutons tr {
+	padding: 0; margin: 0;
+}
+
+#boutons input, #boutons select, #boutons option  {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	height: 25px;
+	color: white;
+	font-family: helvetica, arial, sans-serif;
+	background-color: rgb(10,10,118);
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAeCAIAAABi9+OQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3AwQFDYbJJefXwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAN0lEQVQI103MyQ3AMAACQe+4/4aS5vLwoSAeaEGM530piaYamEjlqNo7kpmblze4P6sdh/228gEumQLy/g1NKAAAAABJRU5ErkJggg==);
+	vertical-align: top;
+}
+
+
+#boutons input.fleche {
+	vertical-align: top; width: 40px;
+	text-align: center;
+	line-height: 1;
+	font-size: 1.4em; color: blue; font-weight: bold;
+}
+
+#boutons input.fleche:hover {
+	text-align: center;
+		vertical-align: top;
+	background-color: rgb(220,220,220);
+}
+
+#boutons img+div {
+	position: absolute;
+	visibility: hidden;
+	-moz-transform: translateX(-20px) translateY(30px);
+	-webkit-transform: translateX(-20px) translateY(30px);
+	transform: translateX(-20px) translateY(30px);
+	display: inline;
+}
+
+#boutons input+div,#boutons select+div {
+	position: absolute;
+	visibility: hidden;
+	-ms-transform: translateX(-100px) translateY(30px);
+	-o-transform: translateX(-100px) translateY(30px);
+	-moz-transform: translateX(-100px) translateY(30px);
+	-webkit-transform: translateX(-100px) translateY(30px);
+	transform: translateX(-100px) translateY(30px);
+	display: inline;
+	color: black;
+	width: auto;
+	text-align: center;
+}
+
+#boutons img:hover+div, #boutons input:hover+div, #boutons select:hover+div {
+	visibility: visible;
+}
+
+#boutons img+div>div, #boutons input+div>div, #boutons select+div>div {
+	width: 0px;
+	background-color: yellow;
+	border-color: black;
+	font-family: helvetica, sans-serif, arial;
+	font-size: 12px;
+	font-style: italic;
+	display: inline;
+
+}
+
+.definition+div {
+	z-index:100000;
+	position: absolute;
+	visibility: hidden;
+	-ms-transform: translateX(-100px) translateY(30px);
+	-o-transform: translateX(-100px) translateY(30px);
+	-moz-transform: translateX(-100px) translateY(30px);
+	-webkit-transform: translateX(-100px) translateY(30px);
+	transform: translateX(-100px) translateY(30px);
+	display: inline;
+	color: blue;
+	width: auto;
+	text-align: center;
+}
+
+.definition+div>div {
+	width: 0px;
+	background-color: yellow;
+	border-color: black;
+	font-family: helvetica, sans-serif, arial;
+	font-size: 12px;
+	font-style: italic;
+	display: inline;
+
+}
+
+.definition+div:hover {
+	visibility: hidden;
+}
+
+
+#divtuto {
+		position: absolute;
+		top: 30px;
+		left:0px;
+		width: 480px;
+		color: black;
+		visibility: hidden;
+		overflow: auto;
+	z-index: 30;
+	background-color: rgb(220,220,220);
+}
+
+#credits {
+		position: absolute;
+		top: 30px;
+		left:0px;
+		width: 480px;
+		color: black;
+		visibility: hidden;
+		overflow: auto;
+	z-index: 30;
+	background-color: black; color: white;
+	font-family: helvetica, arial, sans-serif;
+
+}
+
+#credits h1 {
+	color: white;
+	font-style: italic;
+}
+
+#credits a {
+	color: white;
+	text-decoration: none;
+}
+
+#credits a:hover {
+	font-weight: bold;
+}
+
+#divtuto input {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	height: 25px;
+	color: black;
+	font-family: helvetica, arial, sans-serif;
+	background-color: rgb(200,200,200);
+	vertical-align: top;
+}
+
+
+#divtuto input.fleche {
+	vertical-align: top; width: 40px;
+	text-align: center;
+	line-height: 1px;
+	font-size: 1.4em; color: blue; font-weight: bold;
+}
+
+#divtuto input.fleche:hover {
+	text-align: center;
+		vertical-align: top;
+	background-color: rgb(220,220,220);
+}
+
+.divfullscreen {
+	text-align: center;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 1.4em; color: green; font-weight: bold;
+	letter-spacing: -8px;
+	font-size: 25px;
+}
+
+.divfullscreen:hover {
+	background-color: rgb(220,220,220);
+}
+
+#weboutput {
+	padding: 0px;
+	position: absolute;
+	top:30px;
+	left:0px;
+	border: none;
+	width: 800px;
+	height: 100%;
+	visibility: hidden;
+			overflow: auto;
+
+}
+
+#GestionFichiers {
+	background-color: black;
+	color: white;
+		position: absolute;
+		top: 30px;
+		left:0px;
+		width: 480px;
+		color: black;
+		visibility: hidden;
+		overflow: auto;
+	z-index: 30;
+	font-family: helvetica, arial, sans-serif;
+	}
+
+#GestionFichiers h1 {
+	color: white;
+	font-style: italic;
+}
+
+
+#frameweboutput {
+	position: relative;
+	top:0px;
+	left:0px;
+	border: none;
+	background-color: rgb(230,230,230);
+	width: 100%;
+	height: 100%;
+			overflow: auto;
+
+}
+
+.fleche {
+	z-index: 2000;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.fleche:hover {
+	transform: scale(1) translateY(0px);
+	-webkit-transform: scale(1) translateY(0px);
+	-ms-transform: scale(1) translateY(0px);
+	-moz-transform: scale(1) translateY(0px);
+	-o-transform: scale(1) translateY(0px);
+}
+
+#GestionFichiers>div>h1+div {
+	-ms-transform-origin: top left;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	transform-origin: top left;
+
+	-ms-transition: -moz-transform 1s ease;
+	-moz-transition: -moz-transform 1s ease;
+	-webkit-transition: -webkit-transform 1s ease;
+	-o-transition: -o-transform 1s ease;
+	transition: transform 1s ease;
+
+	-ms-transform: scaleY(1);
+	-o-transform: scaleY(1);
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+	-moz-transform: scaleY(1);
+	height: auto;
+	 display: none;
+}
+
+
+
+#GestionFichiers>div:hover>h1+div {
+	-ms-transform: scaleY(1);
+	-moz-transform: scaleY(1);
+	-webkit-transform: scaleY(1);
+	-o-transform: scaleY(1);
+	transform: scaleY(1);
+	height: auto;
+	display: inherit;
+}
+
+@media (max-width: 0px) {
+.fleche:hover {
+	transform: scale(1.5) translateY(10px);
+	-webkit-transform: scale(1.5) translateY(10px);
+	-ms-transform: scale(1.5) translateY(5px);
+	-moz-transform: scale(1.5) translateY(5px);
+	-o-transform: scale(1.5) translateY(5px);
+}
+
+#GestionFichiers>div>h1+div {
+	-ms-transform-origin: top left;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	transform-origin: top left;
+
+	-ms-transition: -moz-transform 1s ease;
+	-moz-transition: -moz-transform 1s ease;
+	-webkit-transition: -webkit-transform 1s ease;
+	-o-transition: -o-transform 1s ease;
+	transition: transform 1s ease;
+
+	-ms-transform: scaleY(0.2);
+	-o-transform: scaleY(0.2);
+	-webkit-transform: scaleY(0.2);
+	transform: scaleY(0.2);
+	-moz-transform: scaleY(0.2);
+	height: 50px;
+	display: none;
+}
+
+
+
+#GestionFichiers>div:hover>h1+div {
+	-ms-transform: scaleY(1);
+	-moz-transform: scaleY(1);
+	-webkit-transform: scaleY(1);
+	-o-transform: scaleY(1);
+	transform: scaleY(1);
+	height: auto;
+	display: inherit;
+}
+}
+
+#GestionFichiers {
+	vertical-align: top;
+}
+
+#GestionFichiers .bonglet {
+	-ms-transition: background-color 0.5s ease;
+	-moz-transition: background-color 0.5s ease;
+	-webkit-transition: background-color 0.5s ease;
+	-o-transition: background-color 0.5s ease;
+	transition: background-color 0.5s ease;
+	padding-top: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 5px;
+	vertical-align: middle;
+	font-size: 1.5em;
+	background-color: rgb(255,255,255);
+	color: black;
+}
