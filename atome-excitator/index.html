@@ -13,7 +13,7 @@
 		xhr.open('GET', 'https://raw.githubusercontent.com/grallm/algoscript-atom-game/master/main.js');
 		xhr.addEventListener('readystatechange',function () {	// RECEIVE DATAS
 			if(xhr.readyState === XMLHttpRequest.DONE /*&& xhr.status === 200*/){	// DATAS RECEIVED AND NO ERROR
-				setTimeout(function () {window.eval(xhr.responseText);},1000);	// ALL PROPOSALS
+				setTimeout(function () {window.eval(xhr.responseText);},10);	// ALL PROPOSALS
 			}
 		});
 		xhr.send(null);
