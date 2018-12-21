@@ -10,7 +10,7 @@
 <script type="text/javascript">
 	(function () {
 		xhr = new XMLHttpRequest();
-		xhr.open('GET', 'https://raw.githubusercontent.com/grallm/algoscript-atom-game/071650baf47f94a71314bb6bc5ff4dbf4d2ab2b9/main.js');
+		xhr.open('GET', 'https://raw.githubusercontent.com/grallm/algoscript-atom-game/0dc33f55d317b9a12e87784668329f634e3f32ce/main.js');
 		xhr.addEventListener('readystatechange',function () {	// RECEIVE DATAS
 			if(xhr.readyState === XMLHttpRequest.DONE /*&& xhr.status === 200*/){	// DATAS RECEIVED AND NO ERROR
 				setTimeout(function () {window.eval(xhr.responseText);},10);	// ALL PROPOSALS
